@@ -21,7 +21,7 @@ ssh bandi6@bandit.labs.overthewire.org -p 2220
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
 ```bash
-morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
 
 The `ls` command was to identify files present, but nothing came back.
