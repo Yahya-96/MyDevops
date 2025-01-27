@@ -34,7 +34,7 @@ spaces in this filename
 ```
 
 ### 3: Display contents of `spaces in this filename` file
-Its imprtant to be mindful when dealing with files that have spaces. We can either use a backslash (`\`) between each word, or use a single(`'`) or double (`"`) quotation mark. I decided to use the backslash.
+Its imprtant to be mindful when dealing with files that have spaces. We can either use a backslash (`\`) between each word, or quotation marks (`"`). I decided to use the backslash.
 
 ```bash
 cat spaces\in\this\filename
