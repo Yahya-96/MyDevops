@@ -65,7 +65,7 @@ drwxr-xr-x 3 root    root    4096 Sep 19 07:08 ..
 By using the `file` command, it will help us identify the the file types by checking the contents of all files.
 
 ```bash
-file ./
+file ./*
 ```
 
 ### The output:
