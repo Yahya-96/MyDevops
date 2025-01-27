@@ -180,3 +180,14 @@ cat data05
 ```
 FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 ```
+## 4: Note down the password 
+The password will be noted down as it is needed to progress to the next level (`bandit13`).
+
+## 5: Exit Session
+
+We will logout of the session by typing:
+
+```bash
+exit
+```
+---
