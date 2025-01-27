@@ -51,5 +51,12 @@ cat /var/lib/dpkg/info/bandit7.password
 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ---
-## 4: 
+## 4: Exit Session
+
+We will logout of the session by typing:
+
+```bash
+exit
+```
+---
 
