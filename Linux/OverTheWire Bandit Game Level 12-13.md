@@ -99,4 +99,84 @@ gzip -d data03.gz
 ```
 file data03
 ```
-This returned a `data03: POSIX tar archive (GNU)` file.
+This returned a `data03: POSIX tar archive (GNU)` file. 
+
+## 13: Use the `tar` command to extract tar archive.
+```
+tar -xvf data03
+```
+### Output:
+```
+data5.bin
+```
+## 14: Check the new file.
+```
+file data5.bin
+```
+This returned a `data5.bin: POSIX tar archive (GNU)` file
+
+## 15: Use the `tar` command to extract tar archive. 
+```
+tar -xvf data5.bin
+```
+### Output:
+```
+data6.bin
+```
+
+## 16: Check the new file.
+```
+file data6.bin
+```
+This returned a `bzip2` compressed file.
+
+## 17: Decompress the `bzip2` file.
+In order to decompress, as we're dealing with a `bzip2` file, it will be renamed using the `mv` command and a bzip2 extension will be provided. I renamed the file `data04.bz2`.
+```
+mv data6.bin data04.bz2
+bzip2 -d data04.bz2
+```
+
+## 18: Check the new file.
+```
+file data04
+```
+This returned a `data04: POSIX tar archive (GNU)` file.
+
+## 19: Use the `tar` command to extract tar archive.
+```
+tar -xvf data04
+```
+### Output:
+```
+data8.bin
+```
+
+## 20: Check the new file.
+```
+file data8.bin
+```
+This returned a `gzip` compressed file.
+
+## 21: Decompress the `gzip` compressed file
+In order to decompress, as we're dealing with a `gzip` file, it will be renamed using the `mv` command and a gzip extension will be provided. I renamed the file `data05.gz`.
+```
+mv data8.bin data05.gz
+gzip -d data05.gz
+```
+
+## 22: Check the last file.
+```
+file data05
+```
+This returned a `ASCII text` file
+
+## 23: Use `cat` to read the file.
+The `cat` command will be used to display the contents of the file. The output will give us the password
+```
+cat data05
+```
+### Output: 
+```
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+```
