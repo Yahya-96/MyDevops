@@ -52,7 +52,7 @@ morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ---
 
-## 4:Note down the password 
+## 4: Note down the password 
 The password will be noted down as it is needed to progress to the next level (`bandit7`).
 
 ## 4: Exit Session
