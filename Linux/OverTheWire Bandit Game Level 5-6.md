@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 4-5
+# OverTheWire Bandit - Level 5-6
 
 ## The Objective :
 The task is to find the password in order to progress to the next level. The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
