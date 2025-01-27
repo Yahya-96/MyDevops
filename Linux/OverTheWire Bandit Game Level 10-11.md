@@ -37,7 +37,7 @@ The `cat` command was used to identify the encoded file and it gave the followin
 VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
 ```
 ## 3: Decode the encoded base64 file.
-After doing some digging using the manpage, the follwoing command will be used:
+After doing some digging using the manpage, the following command will be used:
 ```
 base64 -d data.txt
 ```
