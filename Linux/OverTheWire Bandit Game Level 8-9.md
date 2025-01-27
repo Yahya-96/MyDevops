@@ -45,4 +45,14 @@ sort data.txt | sort | uniq -u
 ```
 This is the password for the next level.
 
-## 4: 
+## 4: Note down the password 
+The password will be noted down as it is needed to progress to the next level (`bandit9`).
+
+## 5: Exit Session
+
+We will logout of the session by typing:
+
+```bash
+exit
+```
+---
