@@ -20,31 +20,30 @@ I was prompted for a password. I will use the password obtained from the previou
 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 ```
 
-The `ls` command was to identify files present, but nothing came back.
+## 2: List files in directory
+The `ls` command will be used to list the files in the current directory. A file called `data.txt` was present.
 
-## 2: Search for the file using `find` command
-As we already know the size (33 bytes), user(bandit7) and group(bandit6), the following was used:
 ```bash
-find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+ls
 ```
+### Output:
+```
+data.txt
+```
+The cat command was used to display the files but it came back with a long list that was near impossible to manually go through.
+
+## 2: Use `grep` to search for the word "millionth".
+After doing research on the man page - `grep man`,  `grep` commmand was identified as the ideal command to use as it allows us to search for specific texts within files. As we're searching for the word "millionth", the following was used:
+
+```bash
+grep millionth data.txt
+```
+The output will give us the password.
 
 ### Output: 
 ```bash
-/var/lib/dpkg/info/bandit7.password
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```
-
-
-
-
-## 3: Display contents of file using `cat`.
-As we have idenfied the file (`/var/lib/dpkg/info/bandit7.password`), we will now use `cat` to view the contents. This output will give us the password for the next level.
-
-```bash
-cat /var/lib/dpkg/info/bandit7.password
-```
-
-### Output
-morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ---
 ## 4: Exit Session
