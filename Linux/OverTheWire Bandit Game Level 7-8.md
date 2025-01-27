@@ -46,7 +46,11 @@ dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```
 
 ---
-## 4: Exit Session
+
+## 4: Note down the password 
+The password will be noted down as it is needed to progress to the next level (`bandit8`).
+
+## 5: Exit Session
 
 We will logout of the session by typing:
 
