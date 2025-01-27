@@ -34,11 +34,13 @@ data.txt
 
 
 ## 3: Decode the encoded `ROT13` text in `data.txt`.
-The contents of the `data.txt` file will need to be decoded. This is due to it being encoded using `ROT13`. This is a substitution cipher which rotates the characters by 13 positions. To decode, we will do the following:
+The contents of the `data.txt` file will need to be decoded. This is due to it being encoded using `ROT13`. This is a substitution cipher which rotates the characters by 13 positions. We will make use of the `tr` command to decode the `ROT13` text in `data.txt`. To decode, we will do the following:
 
 ```
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
+`tr`: This command translates or deletes characters from standard input and writes the result to standard output.
+
 `A-Za-z` matches uppercase(A-Z) and lowercase(a-z) letters. 
 `N-ZA-Mn-za-m` rotates the letters by the 13 positions and warps around the alphabet.
 
