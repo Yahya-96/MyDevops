@@ -42,7 +42,8 @@ cd inhere
 ```
 
 ## 4: Show all files in the directory `ls -al`
-Using the `ls-al` command will allow us to list all the files in the directory, including hidden files. It will also include information about permissions and file types. The output gave me many directories named "maybehere" starting with `maybehere00` all the way to `maybehere19.
+Using the `ls-al` command will allow us to list all the files in the directory, including hidden files. It will also include information about permissions and file types. 
+The output gave me many directories named "maybehere" starting with `maybehere00` all the way to `maybehere19`.
 
 
 
