@@ -32,3 +32,17 @@ ls
 data.txt
 ```
 
+## 3: Use manpage to research the suitable commands to use.
+We will use the `sort` command to sort the files by grouping together identical lines. We will also use`uniq-u`. This will only leave unique lines once it has filtered out lines that appear more than once.
+
+```
+sort data.txt | sort | uniq -u
+```
+
+### Output: 
+```
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+```
+This is the password for the next level.
+
+## 4: 
