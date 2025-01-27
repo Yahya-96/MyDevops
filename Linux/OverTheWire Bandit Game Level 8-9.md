@@ -26,3 +26,9 @@ The `ls` command will be used to list the files in the current directory. A file
 ```bash
 ls
 ```
+
+### Output:
+```
+data.txt
+```
+
