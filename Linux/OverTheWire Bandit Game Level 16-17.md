@@ -33,4 +33,7 @@ nmap -sV localhost -p 31000-32000
 
 The output returned 5 open ports. However, there are only 2 ports that use SSL/TLS: `31518` and `31790`.
 
-## 3: Use openss
+## 3: Use `openssl s_client` to connect to SSL/TLS
+Similar to the previous level, we will use a Pipe(`|`) in between the `cat` command and `openssl s_client`. We will enter the 2 ports (`31518` and `31790`) 
+```
+
