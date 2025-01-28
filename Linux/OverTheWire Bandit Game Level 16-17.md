@@ -77,9 +77,6 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 ```
 
 ## 4: Create a directory before creating a Private Key using the `nano` command.
-In order to use the RSA Key, we will need to create a private key in order to use the RSA key. We can do this by using the `nano` command. 
-`nano` is a text editor which allows us to edit text files from the command-line.
-
 We will need to first create a directory in the `/tmp` directory using the `mkdir` command. It will be called `bandit333`.
 
 ```
@@ -92,8 +89,30 @@ Once created, we will go the directory using the `cd` command.
 cd /tmp/bandit333
 ```
 
+## 5: Use `nano` to create a private key.
+We will need to create a private key in order to use the RSA key. We can do this by using the `nano` command. 
+`nano` is a text editor which allows us to edit text files from the command-line.  I created a private key using the `nano` command and called the file “sshkey17.private”.
 
+```
+nano sshkey17.private
+```
 
+Once the `nano` command was run, I was prompted to press ‘Enter’ key to continue. Once done, the private key will be opened to edit using nano. I pasted the RSA key from earlier. It then allowed me to save the updates. 
+
+## 6: Change permissions to read-only via the `chmod` command.
+To finish up, I used “chmod 400 sshkey17.private”. This made is secure by changing the permissions to read-only. 
+```
+chmod 400 sshkey17.private
+```
+
+## 7: Log into `bandit17` using the Private Key.
+Now that i have the private key, we will use this to log into `bandit17`.
+```
+ssh -i sshkey17.private bandit17@bandit.labs.overthewire.org -p 2220
+```
+This successfully logged me into `bandit17`
+
+---
 
 
 
