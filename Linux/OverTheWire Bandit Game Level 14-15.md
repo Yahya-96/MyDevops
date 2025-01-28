@@ -8,7 +8,7 @@ The password for the next level can be retrieved by submitting the password of t
 ## Solution:
 
 ## 1: Retrieve the password for the current level
-We are logged into `bandit14` level due to the actions taken in the previous level. In order to display the password for `bandit14`, we will use the `cat` command.
+We are logged into level `bandit14` due to the actions taken in the previous level. In order to display the password for `bandit14`, we will use the `cat` command.
 
 ```bash
 cat /etc/bandit_pass/bandit14
