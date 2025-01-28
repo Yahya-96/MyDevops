@@ -19,3 +19,16 @@ I was prompted for a password. I will use the password obtained from the previou
 ```bash
 cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
 ```
+
+## 2: List files in directory
+Next, `ls` coomand will be used to identify the files present. The file present was `bandit20-do`.
+
+```bash
+ls
+```
+
+### Output:
+
+```bash
+bandit20-do
+```
