@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 7-8
+# OverTheWire Bandit Game - Level 7-8
 
 ## The Objective :
 Find the password in order to progress to the next level. The password for the next level is stored in the file data.txt next to the word millionth.
