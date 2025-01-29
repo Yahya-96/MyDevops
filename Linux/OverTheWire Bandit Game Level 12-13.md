@@ -1,4 +1,4 @@
-# OverTheWire Bandit Gane - Level 12-13
+# OverTheWire Bandit Game - Level 12-13
 
 ## The Objective : 
 Find the password in order to progress to the next level. The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed.
