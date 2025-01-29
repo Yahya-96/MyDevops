@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 0 & 0-1 
+# OverTheWire Bandit Game - Level 0 & 0-1 
 
 ## The Objective :
 The task is to find the password in order to progress to the next level. I am told the password for the next level is stored in a file called `readme` located in the home directory.
