@@ -1,7 +1,7 @@
 # OverTheWire Bandit - Level 3-4
 
 ## The Objective :
-The task is to find the password in order to progress to the next level. The password for the next level is stored in a hidden file in the `inhere` directory.
+Find the password in order to progress to the next level. The password for the next level is stored in a hidden file in the `inhere` directory.
 
 ---
 
