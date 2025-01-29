@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 19-20
+# OverTheWire Bandit Game - Level 19-20
 
 ## The Objective :
 To gain access to the next level(`bandit20`), we will use the setuid binary in the homedirectory. The password for this level can be found in the usual place (`/etc/bandit_pass`).
