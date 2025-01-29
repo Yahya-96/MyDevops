@@ -1,7 +1,7 @@
 # OverTheWire Bandit - Level 11-12
 
 ## The Objective : 
-The task is to find the password in order to progress to the next level. The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions.
+Find the password in order to progress to the next level. The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions.
 
 ---
 
