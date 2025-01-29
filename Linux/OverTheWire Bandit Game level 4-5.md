@@ -1,7 +1,7 @@
 # OverTheWire Bandit - Level 4-5
 
 ## The Objective :
-The task is to find the password in order to progress to the next level. The password for the next level is stored in the only human-readable file in the inhere directory.
+Find the password in order to progress to the next level. The password for the next level is stored in the only human-readable file in the inhere directory.
 
 ---
 
@@ -10,20 +10,20 @@ The task is to find the password in order to progress to the next level. The pas
 ## 1: Connect to Server
 We will use the password obtained from the previous level to connect to the level 4 SSH server.
 
-```bash
+```
 ssh bandi4@bandit.labs.overthewire.org -p 2220
 ```
 
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
-```bash
+```
  2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
 
 ## 2: List files in directory
 The `ls` command will be used to list the files in the current directory. The `inhere` directory was present.
 
-```bash
+```
 ls
 ```
 This will show a directory called `inhere`
@@ -33,19 +33,19 @@ This will show a directory called `inhere`
 ## 3: Go to the `inhere` directory
 We will change to the `inhere` directory using the `cd` command following:
 
-```bash
+```
 cd inhere
 ```
 
 ## 4: Show all files in the directory - including hidden files using `ls -la`
 Using the `ls-la` command will allow us to list all the files in the directory, including hidden files. It will also include information about permissions and file types. The output will list 10 files.
 
-```bash
+```
 ls -a
 ```
 
 ### Output:
-```bash
+```
 total 48
 drwxr-xr-x 2 root    root    4096 Sep 19 07:08 .
 drwxr-xr-x 3 root    root    4096 Sep 19 07:08 ..
@@ -64,13 +64,13 @@ drwxr-xr-x 3 root    root    4096 Sep 19 07:08 ..
 ## 5: Check the file type using `file` command. 
 By using the `file` command, it will help us identify the the file types by checking the contents of all files.
 
-```bash
+```
 file ./*
 ```
 
 ### The output:
 
-```bash
+```
 ./-file00: data
 ./-file01: data
 ./-file02: data
@@ -86,22 +86,16 @@ file ./*
 ## 6: Check the contents of the human-readable file `-file07`. 
 The `file07` file is the only file that came back as "ASCII text". This tells us it is the readable file we want. We will use the `cat` command to open the file and it will reveal the password.
 
-```bash
+```
 cat ./file07
 ```
 
 ### Output
 Password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
+
 ## 7: Note down the password 
 The password will be noted down as it is needed to progress to the next level (`bandit5`).
 
 
-## 8: Exit Session
-
-We will logout of the session by typing:
-
-```bash
-exit
-```
 ---
