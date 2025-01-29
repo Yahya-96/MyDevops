@@ -10,20 +10,20 @@ The password for the next level is stored in `/etc/bandit_pass/bandit14` and can
 ## 1: Connect to Server
 We will use the password obtained from the previous level to connect to the level 13 SSH server.
 
-```bash
+```
 ssh bandi13@bandit.labs.overthewire.org -p 2220
 ```
 
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
-```bash
+```
 FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 ```
 
 ## 2: List files in directory
 The `ls` command will be used to list the files in the current directory. A file called `sshkey.private` was present.
 
-```bash
+```
 ls
 ```
 
