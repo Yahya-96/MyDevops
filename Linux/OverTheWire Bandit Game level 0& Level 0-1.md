@@ -36,7 +36,7 @@ We will now use the `cat readme` to show contents of the file. This will contain
 cat readme
 ```
 
-### The output:
+### Output:
 
 ```bash
 Congratulations on your first steps into the bandit game!!
