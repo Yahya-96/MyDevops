@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 15-16
+# OverTheWire Bandit Game - Level 15-16
 
 ## The Objective :
 The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
@@ -10,13 +10,13 @@ The password for the next level can be retrieved by submitting the password of t
 ## 1: Connect to Server
 We will use the password obtained from the previous level to connect to the level 15 SSH server.
 
-```bash
+```
 ssh bandi15@bandit.labs.overthewire.org -p 2220
 ```
 
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
-```bash
+```
 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 ```
 
