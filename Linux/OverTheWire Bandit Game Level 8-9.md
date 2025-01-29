@@ -1,4 +1,4 @@
-# OverTheWire Bandit - Level 8-9
+# OverTheWire Bandit Game - Level 8-9
 
 ## The Objective :
 Find the password in order to progress to the next level. The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
