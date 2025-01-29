@@ -27,51 +27,43 @@ The `ls` command will be used to list the files in the current directory. The `i
 ls
 ```
 
-### The output:
+### Output:
 
-```bash
+```
 inhere
 ```
 
 ### 3: Go to the `inhere` directory
 We will change to the `inhere` directory using the `cd` command following:
 
-```bash
+```
 cd inhere
 ```
 
 ### 4: Show hidden files using `ls -a`
 Hidden files begin with a dot (`.`). In order to display hidden files, we include `-a` after `ls`. A file named `...Hiding-From-You` appeared. 
 
-```bash
+```
 ls -a
 ```
 
 ### Output:
-```bash
+```
 ...Hiding-From-You
 ```
 
 ### 5: View contents of the hidden file
 Use the `cat` command to view the contents of the file and retrieve the password.
 
-```bash
+```
 cat ...Hiding-From-You
 ```
 
-### The output:
+### Output:
 
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 ### 4: Note down the password 
 The password will be noted down as it is needed to progress to the next level (`bandit4`).
 
-
-### 5: Exit Session
-
-We will logout of the session by typing:
-
-```bash
-exit
-```
 ---
