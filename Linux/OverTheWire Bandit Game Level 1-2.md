@@ -40,7 +40,7 @@ I was mindful of the fact that it is a special character. Since `-` is interpret
 cat ./-.
 ```
 
-### The output:
+### Output:
 
 ```bash
 263JGJPfgU6LtdEvgfWU1XP5yac29mFx 
@@ -51,10 +51,4 @@ The password will be noted down as it is needed to progress to the next level (`
 
 Password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx 
 
-### 5: Exit Session
-
-We will logout out of the session by typing:
-
-```bash
-exit
-```
+---
