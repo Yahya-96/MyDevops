@@ -1,7 +1,7 @@
-# OverTheWire Bandit - Level 2-3
+# OverTheWire Bandit Game - Level 2-3
 
 ## The Objective :
-The task is to find the password in order to progress to the next level. The password for the next level is stored in a file called `spaces in this filename` located in the home directory.
+Find the password in order to progress to the next level. The password for the next level is stored in a file called `spaces in this filename` located in the home directory.
 
 ---
 
