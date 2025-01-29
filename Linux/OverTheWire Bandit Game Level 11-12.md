@@ -10,20 +10,20 @@ Find the password in order to progress to the next level. The password for the n
 ## 1: Connect to Server
 We will use the password obtained from the previous level to connect to the level 11 SSH server.
 
-```bash
+```
 ssh bandi11@bandit.labs.overthewire.org -p 2220
 ```
 
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
-```bash
+```
 dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr 
 ```
 
 ## 2: List files in directory
 The `ls` command will be used to list the files in the current directory. A file called `data.txt` was present.
 
-```bash
+```
 ls
 ```
 
@@ -55,11 +55,5 @@ The output will give us the password.
 ## 4: Note down the password 
 The password will be noted down as it is needed to progress to the next level (`bandit12`).
 
-## 5: Exit Session
 
-We will logout of the session by typing:
-
-```bash
-exit
-```
 ---
