@@ -1,4 +1,4 @@
-# OverTheWire Bandit Gane - Level 17-18
+# OverTheWire Bandit Game - Level 17-18
 
 ## The Objective : 
 There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new
@@ -10,7 +10,7 @@ There are 2 files in the homedirectory: passwords.old and passwords.new. The pas
 ## 1: Connect to Server
 We will use the private key from the previous level to log into `bandit17`.
 
-```bash
+```
 ssh -i sshkey17.private bandit17@bandit.labs.overthewire.org -p 2220
 ```
 
@@ -18,7 +18,7 @@ ssh -i sshkey17.private bandit17@bandit.labs.overthewire.org -p 2220
 ## 2: List files in directory
 The `ls` command will be used to list the files in the current directory. Two files were present: `password.new` and `password.old`.
 
-```bash
+```
 ls
 ```
 
