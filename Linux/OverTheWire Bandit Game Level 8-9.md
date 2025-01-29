@@ -1,7 +1,7 @@
 # OverTheWire Bandit - Level 8-9
 
 ## The Objective :
-The task is to find the password in order to progress to the next level. The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
+Find the password in order to progress to the next level. The password for the next level is stored in the file data.txt and is the only line of text that occurs only once.
 
 ---
 
@@ -16,14 +16,14 @@ ssh bandi8@bandit.labs.overthewire.org -p 2220
 
 I was prompted for a password. I will use the password obtained from the previous level to enter the server.
 
-```bash
+```
 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```
 
 ## 2: List files in directory
 The `ls` command will be used to list the files in the current directory. A file called `data.txt` was present.
 
-```bash
+```
 ls
 ```
 
@@ -48,11 +48,4 @@ This is the password for the next level.
 ## 4: Note down the password 
 The password will be noted down as it is needed to progress to the next level (`bandit9`).
 
-## 5: Exit Session
-
-We will logout of the session by typing:
-
-```bash
-exit
-```
 ---
