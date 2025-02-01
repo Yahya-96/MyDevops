@@ -7,19 +7,19 @@
 ```
 #!/bin/bash
 
-# Define directory and file name
+# This defines directory and file name
 dir_name="my_directory"
 file_name="my_file.txt"
 
-# Create the directory
+# This creates the directory
 mkdir -p "$dir_name"
 
-# Navigate into the directory
+# This navigates into the directory
 cd "$dir_name" || exit
 
-# Create the file and write text to it
+# This creates the file and writes text to it
 echo "Hello, how are you?" > "$file_name"
 
-# Display the contents of the file
+# This display the contents of the file
 cat "$file_name"
 ```
