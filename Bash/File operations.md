@@ -10,21 +10,61 @@ Before we conduct the file operations, we will first need to create a script. I 
 ```
 touch operations.sh
 ```
-I will open the file using the `nano` text editor. This will allow me to input the intended bash script.
+I will open the file using the `nano` text editor. `nano` is a text editor which allows us to edit the text files from the command-line. This will allow me to input the intended bash script.
 ```
 nano operations.sh
 ```
-
+---
 ## 2: Start the bash script with the "Shebang" line (`#!/bin/bash`).
 This is the first line of any bash script. Every bash script starts with `#!/bin/bash`. It tells the system to use the bash shell to interpret the script. 
 ```
 #!/bin/bash
 ```
+---
+## 3: Define the directory and file names.
+Before we create our directory and file, we will first need to assign names to them. i will keep things simple and so i will call the directory `my_directory`. I also call the file `the_file.txt`.
+```
+# This defines directory and file name
+dir_name="my_directory"
+file_name="the_file.txt"
+```
+`dir_name`: This is a variable that stores the directory name.
 
-## 3: Get the users input using `read -p`.
-As we will need to ask the user to input two numbers, the following will be used:
+`file_name`: This is a variable that stores the file name.
 
 
+---
+## 4: Create a directory.
+```
+mkdir -p "$dir_name
+```
+
+`mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The ‘-p’ that follows is important as the directory will only be created if it does not exist. This prevents any errors.
+
+
+## 5: Navigate into the directory.
+Next, we will need to navigate to the directory. we will use the following command:
+```
+cd "$dir_name" || exit
+```
+
+`cd "$dir_name"`: This changes into the directory stored in the `dir_name` variable. 
+
+
+`|| exit`:  The script stops immediately if the required directory is missing, preventing unexpected errors later. This is used to stop the script if the preceding command fails.   
+
+---
+## 6: Create the file and input text.
+The `echo` command will be used to create the file and write to it.
+```
+echo "Hello mate, how are you?" > "$file_name"
+```
+
+`>`:  This redirects output to the file via the variable `$file_name`.
+
+This will print the text to the terminal.
+
+## 7: 
 
 
 
