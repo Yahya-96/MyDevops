@@ -22,7 +22,11 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 ```
 ---
 
-## 3: 
+## 3: Identify the file path.
+In order to find a file, i will prompt the user with a message, asking them to input the name of the file.
+```
+read -p "Please enter the file path:" file
+```
 
 
 ## Output: 
