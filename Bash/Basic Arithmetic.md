@@ -32,6 +32,7 @@ read -p "Please enter the second number: " num2
 read -p: This command will be used in order to prompt the user for an input.
 num1 & num2: This will store the numbers entered by the user.
 
+
 ## 4: It's time to perform the calculations!
 In order to perform the calculations, we will need to start with `$(( )))`. This allows us to perform arithmetic calculations. As i will need to use addition, subtraction, multiplication, and division, i will do the following:
 
@@ -69,7 +70,19 @@ echo "Multiplication: $prod"
 echo "Division: $div"
 ```
 
+## 6: Make it executable and run the script.
+In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `math.sh` executable. Once done, i will run the file using `./`.
+```
+chmod +x math.sh
+./math.sh
+```
 ### Output:
+```
+Please enter the first number: 10
+Please enter the second number: 5
+```
+
+### Final result:
 ```
 Addition: 15
 Subtraction: 5
