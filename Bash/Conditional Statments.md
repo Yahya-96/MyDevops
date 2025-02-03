@@ -1,16 +1,16 @@
 ## The Objective: 
-Write a script that creates a directory, navigates into it, creates a file inside it, writes some text to the file, and then displays the contents of the file. 
+Write a script that checks if a file exists and prints a message indicating whether it exists or not. If it exists, the script should also check if the file is readable, writable, or executable.
 
 ---
 
 ## 1: Create a script.
-Before we conduct the file operations, we will first need to create a script. I will use the `touch` command followed by the name of the script. I will call the script `operations.sh`. The `.sh` is an extension which will indicate it is a bash script.
+First, wee will need to create a script. I will use the `touch` command followed by the name of the script. I will call the script `conditional.sh`. The `.sh` is an extension which will indicate it is a bash script.
 ```
-touch operations.sh
+touch conditional.sh
 ```
 I will open the file using the `nano` text editor. `nano` is a text editor which allows us to edit the text files from the command-line. This will allow me to input the intended bash script.
 ```
-nano operations.sh
+nano conditional.sh
 ```
 
 
@@ -22,6 +22,7 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 ```
 ---
 
+## 3: 
 
 
 ## Output: 
