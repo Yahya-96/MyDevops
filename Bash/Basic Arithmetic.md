@@ -43,12 +43,17 @@ prod=$((num1 * num2))
 div=$(echo "scale=2; $num1 / $num2" | bc)  # Floating-point division
 
 ```
-sum: This will store the addition operation. For example, we will assign number 10 to `num1` and the number 5 to `num2`( 10 + 5 )
-diff: This will store subtraction operation (10 - 5). 
-prod:This will store the multiplication operation (10 * 5).
-div: This will store the division operation.
-scale=2: This sets the number of decimal places to 2 (for precise division).
-| bc: The pipe (`|`) sends the command output to bc (Basic Calculator), which handles floating-point arithmetic in bash. 
+`sum`: This will store the addition operation. For example, we will assign number 10 to `num1` and the number 5 to `num2`( 10 + 5 )
+
+`diff`: This will store subtraction operation (10 - 5). 
+
+`prod`:This will store the multiplication operation (10 * 5).
+
+`div`: This will store the division operation.
+
+`scale=2`: This sets the number of decimal places to 2 (for precise division).
+
+`| bc`: The pipe (`|`) sends the command output to bc (Basic Calculator), which handles floating-point arithmetic in bash. 
 
 
 By default, bash only supports integer division, so `bc` is needed for accurate decimal results. This means that bash does not use decimals but rather rounds it up as a whole number. This allows bash to perform the operation in decimals.  
@@ -72,6 +77,6 @@ Multiplication: 50
 Division: 3.33
 ```
 
-We have succssfully completed this task !🚀
+#### We have succssfully completed this task !🚀
 
 ---
