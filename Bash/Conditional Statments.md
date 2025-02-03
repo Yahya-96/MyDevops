@@ -1,3 +1,5 @@
+# Conditional Statements
+
 ## The Objective: 
 Write a script that checks if a file exists and prints a message indicating whether it exists or not. If it exists, the script should also check if the file is readable, writable, or executable.
 
@@ -101,6 +103,7 @@ A final `if` statement will be used to check if the file is executable.
 
 `fi`: This will close the `if` statement.
 
+---
 
 ## 8:Make it executable and run the script.
 In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `conditional.sh` executable. Once done, i will run the file using `./`.
@@ -109,6 +112,7 @@ chmod +x conditional.sh
 ./conditional.sh
 ```
 
+
 ## Output: 
 ```
 Hi, please enter the file path:
@@ -116,3 +120,6 @@ Hi, please enter the file path:
 ```
 
 
+#### We have succssfully completed this task !🚀
+
+---
