@@ -14,6 +14,8 @@ I will open the file using the `nano` text editor. `nano` is a text editor which
 ```
 nano operations.sh
 ```
+
+
 ---
 ## 2: Start the bash script with the "Shebang" line (`#!/bin/bash`).
 This is the first line of any bash script. Every bash script starts with `#!/bin/bash`. It tells the system to use the bash shell to interpret the script. 
@@ -21,6 +23,8 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 #!/bin/bash
 ```
 ---
+
+
 ## 3: Define the directory and file names.
 Before we create our directory and file, we will first need to assign names to them. i will keep things simple and so i will call the directory `my_directory`. I also call the file `the_file.txt`.
 ```
@@ -41,6 +45,7 @@ mkdir -p "$dir_name
 ```
 
 `mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The ‘-p’ that follows is important as the directory will only be created if it does not exist. This prevents any errors.
+
 
 ---
 ## 5: Navigate into the directory.
