@@ -29,8 +29,9 @@ As we will need to ask the user to input two numbers, the following will be used
 read -p " Please enter the first number: " num1
 read -p "Please enter the second number: " num2
 ```
-read -p: This command will be used in order to prompt the user for an input.
-num1 & num2: This will store the numbers entered by the user.
+`read -p`: This command will be used in order to prompt the user for an input.
+
+`num1` & `num2`: This will store the numbers entered by the user.
 
 
 ## 4: It's time to perform the calculations!
