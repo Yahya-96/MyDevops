@@ -36,15 +36,17 @@ file_name="the_file.txt"
 ---
 ## 4: Create a directory.
 ```
+# This creates the directory
 mkdir -p "$dir_name
 ```
 
 `mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The ‘-p’ that follows is important as the directory will only be created if it does not exist. This prevents any errors.
 
-
+---
 ## 5: Navigate into the directory.
 Next, we will need to navigate to the directory. we will use the following command:
 ```
+#This navigates into the directory
 cd "$dir_name" || exit
 ```
 
@@ -54,37 +56,35 @@ cd "$dir_name" || exit
 `|| exit`:  The script stops immediately if the required directory is missing, preventing unexpected errors later. This is used to stop the script if the preceding command fails.   
 
 ---
+
+
 ## 6: Create the file and input text.
 The `echo` command will be used to create the file and write to it.
 ```
-echo "Hello mate, how are you?" > "$file_name"
+echo "Hello friend, how are you?" > "$file_name"
 ```
 
-`>`:  This redirects output to the file via the variable `$file_name`.
+`>`: This redirects output to the file via the variable `$file_name`.
 
 This will print the text to the terminal.
 
-## 7: 
+
+
+
+## 7: Make it executable and run the script.
+In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `operations.sh` executable. Once done, i will run the file using `./`.
+```
+chmod +x operations.sh
+./operations.sh
+```
 
 
 
 ### Output:
 ```
-#!/bin/bash
 
-# This defines directory and file name
-dir_name="my_directory"
-file_name="my_file.txt"
-
-# This creates the directory
-mkdir -p "$dir_name"
-
-# This navigates into the directory
-cd "$dir_name" || exit
-
-# This creates the file and writes text to it
-echo "Hello, how are you?" > "$file_name"
-
-# This display the contents of the file
-cat "$file_name"
+Hello friend, how are you?
 ```
+
+
+
