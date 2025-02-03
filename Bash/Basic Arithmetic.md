@@ -14,12 +14,14 @@ I will open the file using the `nano` text editor. This will allow me to input t
 ```
 nano math.sh
 ```
+---
 
 ## 2: Start the bash script with the "Shebang" line (`#!/bin/bash`).
 This is the first line of any bash script. Every bash script starts with `#!/bin/bash`. It tells the system to use the bash shell to interpret the script. 
 ```
 #!/bin/bash
 ```
+---
 
 ## 3: Get the users input using `read -p`.
 As we will need to ask the user to input two numbers, the following will be used:
@@ -33,6 +35,7 @@ read -p "Please enter the second number: " num2
 
 `num1` & `num2`: This will store the numbers entered by the user.
 
+---
 
 ## 4: It's time to perform the calculations!
 In order to perform the calculations, we will need to start with `$(( )))`. This allows us to perform arithmetic calculations. As i will need to use addition, subtraction, multiplication, and division, i will do the following:
@@ -60,6 +63,7 @@ div=$(echo "scale=2; $num1 / $num2" | bc)  # Floating-point division
 
 By default, bash only supports integer division, so `bc` is needed for accurate decimal results. This means that bash does not use decimals but rather rounds it up as a whole number. This allows bash to perform the operation in decimals.  
 
+---
 
 ## 5: Display the results of the calculations.
 Once the users inputs the two number and the system does it's calculations, the results will need to be displayed. The `echo` command will be used to display the results to the terminal.
@@ -70,6 +74,8 @@ echo "Subtraction: $diff"
 echo "Multiplication: $prod"
 echo "Division: $div"
 ```
+
+---
 
 ## 6: Make it executable and run the script.
 In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `math.sh` executable. Once done, i will run the file using `./`.
@@ -82,6 +88,7 @@ chmod +x math.sh
 Please enter the first number: 10
 Please enter the second number: 5
 ```
+---
 
 ### Final result:
 ```
