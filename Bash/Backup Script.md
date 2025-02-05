@@ -1,5 +1,7 @@
 # Backup Script
 
+---
+
 ## The Objective: 
 The script will prompt the user to input the paths of their source directory and backup directory. It will identify if the source directory exists. If it does not exist, it will come back with an error message. If it does exist, it will copy all `.txt` files to the backup directory. If the backup directory doesn’t exist, the script will create it first.
 
