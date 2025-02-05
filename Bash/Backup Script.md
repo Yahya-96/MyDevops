@@ -109,7 +109,6 @@ If its unsuccessful, the following wil display:
 ```
 Sorry, there are no .txt files.
 ```
----
 
 #### We have succssfully completed this task !🚀
 
