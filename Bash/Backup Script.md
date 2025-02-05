@@ -24,62 +24,66 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 ```
 ---
 
-## 3: Define the source and backup directories.
+## 3: Prompt the user for the source directory.
+```
+echo "Please enter the source directory:"
+read source
 ```
 
-```
+`read source`: This stores the user’s input in the variable source.
 
-`SOURCE_DIR`: This will set the source directory where `.txt files` are located.
-
-`BACKUP_DIR`: This defines the backup directory and it will be where `.txt` files will be copied.
 
 ---
-## 4: Check if the source directory exists using `if` statement.
-Before we copy all `.txt` files to the backup directory, we will need to check if the source directory exist. If it does not, it will return an error message telling the user the directory does not exist.
+## 4: Prompt the user for the backup directory
 ```
-# This checks the existence of the source directory 
-if [ ! -d "$SOURCE_DIR" ]; then
-    echo "Error! Sorry, the source directory does not exist!"
+echo "Please enter the backup directory:"
+read backup
+```
+`read backup`: This stores the user’s input in the variable backup.
+
+
+## 5: Check if the source directory exists.
+```
+if [ ! -d "$source" ]; then
+    echo "Sorry, the source directory $source does not exist."
     exit 1
 fi
 ```
-`[ ! -d "$SOURCE_DIR" ]`: This checks if the source directory does not exist. 
+`[ ! -d "$source" ]`: This checks if the source directory ($source) does not exist. 
 
 `!`="not".
 
-`-d`: This checks if `$SOURCE_DIR`is a directory.
+`-d`: This checks if `$source`is a directory.
 
 `exit 1`: This exits the script once the error message comes back.
 
-
 If the source directory does not exist, it will return:
 ```
-Error! Sorry, the source directory does not exist!
+Sorry, the source directory $source does not exist.
 ```
+
+
 ---
 
 ## 5: Create the backup directory if it does not exist.
-Now it's time to create the backup directory. We will use the following lines of code to establish if the backup directory exists. If it does not exist, it will be created.
 
 ```
-# This create the backup directory if it doesn't exist.
-if [ ! -d "$BACKUP_DIR" ]; then
-    mkdir -p "$BACKUP_DIR"
-fi
+    mkdir -p "$backup"
 ```
 
- `[ ! -d "$BACKUP_DIR" ]`: This checks if the backup directory does not exist.
 
 `mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The `-p` that follows is important as the directory will only be created if it does not exist. This prevents any errors.
+
+---
 
 
 ## 6: Copy all `.txt` files from the source directory to the backup directory.
 ```
 # This copies all .txt files from the source to the backup directory
-cp "$SOURCE_DIR"/*.txt "$BACKUP_DIR" 2>/dev/null
+cp -b "$source"/*.txt "$backup" 2>/dev/null 
 ```
 
-`cp "$SOURCE_DIR"/*.txt "$BACKUP_DIR"`: This will copy all `.txt` files from `$SOURCE_DIR` to `$BACKUP_DIR`.
+`cp -b`: This command cp -b → copies the `.txt` files from $source to $backup, keeping a backup of the existing files. Its a way of ensuring that `.txt` files are copied without overwriting existing files.
 
  `2>/dev/null`: This is to suppress error messages from being displayed if no `.txt` files exist.
 
