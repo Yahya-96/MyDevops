@@ -67,7 +67,7 @@ Sorry, the source directory $source does not exist.
 
 ---
 
-## 5: Create the backup directory if it does not exist.
+## 6: Create the backup directory if it does not exist.
 
 ```
     mkdir -p "$backup"
@@ -79,7 +79,7 @@ Sorry, the source directory $source does not exist.
 ---
 
 
-## 6: Copy all `.txt` files from the source directory to the backup directory.
+## 7: Copy all `.txt` files from the source directory to the backup directory.
 ```
 # This copies all .txt files from the source to the backup directory
 cp -b "$source"/*.txt "$backup" 2>/dev/null 
@@ -89,8 +89,9 @@ cp -b "$source"/*.txt "$backup" 2>/dev/null
 
  `2>/dev/null`: This is to suppress error messages from being displayed if no `.txt` files exist.
  
-
- ## 7: Check if any `.txt` files were copied.
+ 
+---
+ ## 8: Check if any `.txt` files were copied.
  An `if` statement will be used to check if the files were copied. 
 ```
 # This checks if any .txt files were copied
