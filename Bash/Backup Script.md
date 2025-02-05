@@ -111,7 +111,7 @@ If its successful, the following will display:
 Great,the backup was successful!
 ```
 
-If its unsuccessful, the following wil display:
+If its unsuccessful, the following will display:
 ```
 Sorry, there are no .txt files.
 ```
