@@ -88,6 +88,7 @@ cp -b "$source"/*.txt "$backup" 2>/dev/null
 `cp -b`: This command cp -b → copies the `.txt` files from $source to $backup, keeping a backup of the existing files. Its a way of ensuring that `.txt` files are copied without overwriting existing files.
 
  `2>/dev/null`: This is to suppress error messages from being displayed if no `.txt` files exist.
+ 
 
  ## 7: Check if any `.txt` files were copied.
  An `if` statement will be used to check if the files were copied. 
