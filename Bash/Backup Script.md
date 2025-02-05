@@ -1,7 +1,7 @@
 # Backup Script
 
 ## The Objective: 
-Create a script that copies all .txt files from a specified directory to a backup directory. If the backup directory doesn’t exist, the script will create it first.
+The script will prompt the user to input the paths of their source directory and backup directory. It will identify if the source directory exists. If it does not exist, it will come back with an error message. If it does exist, it will copy all `.txt` files to the backup directory. If the backup directory doesn’t exist, the script will create it first.
 
 ---
 
@@ -26,9 +26,7 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 
 ## 3: Define the source and backup directories.
 ```
-# This defines the source and backup directories
-SOURCE_DIR="/home/kuzan"
-BACKUP_DIR="/home/kuzan/backup"
+
 ```
 
 `SOURCE_DIR`: This will set the source directory where `.txt files` are located.
