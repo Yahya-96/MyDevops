@@ -44,7 +44,7 @@ file_name="the_file.txt"
 mkdir -p "$dir_name
 ```
 
-`mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The ‘-p’ that follows is important as the directory will only be created if it does not exist. This prevents any errors.
+`mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The `-p` that follows is important as the directory will only be created if it does not exist. This prevents any errors.
 
 
 ---
