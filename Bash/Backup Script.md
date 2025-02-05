@@ -72,18 +72,41 @@ fi
 
  `[ ! -d "$BACKUP_DIR" ]`: This checks if the backup directory does not exist.
 
- `mkdir`: This creates the directory
-
- `-p`: 
+`mkdir -p`: This creates a directory if it does not exist. The `mkdir` command is used to create a directory. The `-p` that follows is important as the directory will only be created if it does not exist. This prevents any errors.
 
 
-# Copy all .txt files from the source to the backup directory
+## 6: Copy all `.txt` files from the source directory to the backup directory.
+```
+# This copies all .txt files from the source to the backup directory
 cp "$SOURCE_DIR"/*.txt "$BACKUP_DIR" 2>/dev/null
+```
 
-# Check if any .txt files were copied
+`cp "$SOURCE_DIR"/*.txt "$BACKUP_DIR"`: This will copy all `.txt` files from `$SOURCE_DIR` to `$BACKUP_DIR`.
+
+ `2>/dev/null`: This is to suppress error messages from being displayed if no `.txt` files exist.
+
+ ## 7: Check if any `.txt` files were copied.
+ An `if` statement will be used to check if the files were copied. 
+```
+# This checks if any .txt files were copied
 if [ $? -eq 0 ]; then
     echo "Great,the backup was successful!"
 else
-    echo "No .txt files found to copy."
+    echo "Sorry, there are no .txt files."
 fi
+```
 
+`$?`: This will store the exit of the last command ( in this case, its `cp`)
+
+`-eq 0`: This checks if `cp` was sucessful (exit code `0` = success).
+
+If its successful, the following will display:
+```
+Great,the backup was successful!
+```
+
+If its unsucessful, the following wil display:
+```
+Sorry, there are no .txt files.
+```
+---
