@@ -82,7 +82,7 @@ Sorry, the source directory $source does not exist.
 ## 7: Copy all `.txt` files from the source directory to the backup directory.
 ```
 # This copies all .txt files from the source to the backup directory
-cp -b "$source"/*.txt "$backup" 2>/dev/null 
+cp -b "$source"/*.txt "$backup"
 ```
 
 `cp -b`: This command cp -b → copies the `.txt` files from $source to $backup, keeping a backup of the existing files. Its a way of ensuring that `.txt` files are copied without overwriting existing files.
