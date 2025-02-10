@@ -30,7 +30,7 @@ Before we create our directory and file, we will first need to assign names to t
 ```
 # This defines directory and file name
 dir_name="my_directory"
-file_name="the_file.txt"
+file_name="the_file_$(date +%Y%m%d%H%M%S).txt"
 ```
 `dir_name`: This is a variable that stores the directory name.
 
@@ -67,12 +67,12 @@ cd "$dir_name" || exit
 The `echo` command will be used to create the file and write to it.
 ```
 echo "Hello friend, how are you?" > "$file_name"
+cat "$file_name" 
 ```
 
 `>`: This redirects output to the file via the variable `$file_name`.
 
 This will print the text to the terminal.
-
 
 
 
