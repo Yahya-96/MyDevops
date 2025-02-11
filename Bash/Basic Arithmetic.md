@@ -23,6 +23,39 @@ This is the first line of any bash script. Every bash script starts with `#!/bin
 ```
 ---
 
+## 3: Validate numeric function.
+```
+
+# Function to validate numeric input
+is_number() {
+    [[ $1 =~ ^-?[0-9]+(\.[0-9]+)?$ ]]
+}
+
+# Get first number with validation
+while true; do
+    read -p "Enter first number: " num1
+    if is_number "$num1"; then
+        break
+    else
+        echo "❌ Invalid input. Please enter a number."
+    fi
+done
+
+# Get second number with validation
+while true; do
+    read -p "Enter second number: " num2
+    if is_number "$num2"; then
+        break
+    else
+        echo "❌ Invalid input. Please enter a number."
+    fi
+done
+```
+
+This will make sure the user inputs numbers rather than letters. If user enters something other than a number, they will be met with an error message.
+
+---
+
 ## 3: Get the users input using `read -p`.
 As we will need to ask the user to input two numbers, the following will be used:
 

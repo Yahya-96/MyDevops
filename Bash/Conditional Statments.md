@@ -47,56 +47,23 @@ if [ -e "$file" ]; then
 
 ---
 
-## 5: Check if the file is readable.
-I will again use the if statement to check if the file is readable.
+## 5: Check if the file is readable, writable and executable.
+I will again use the if statement to check if the file is readable, writable and executable.
 ```
- # This will check if the file is readable
-    if [ -r "$file" ]; then
-        echo "The file is readable."
-    else
-        echo "The file is NOT readable."
-    fi
+
+    # Check file permissions
+    [ -r "$file" ] && echo "It is readable." || echo "It is NOT readable."
+    [ -w "$file" ] && echo "It is writable." || echo "It is NOT writable."
+    [ -x "$file" ] && echo "It is executable." || echo "It is NOT executable."
+else
+    echo "The file '$file' does not exist."
+fi
 
 ```
 `-r`: This checks if the file is readable.
 
-`else`: This will be used in case the condition is false. It will be used to define an alternative block of code that will run only if the condition is false.
-
-`fi`: This will close the `if` statement.
-
----
-
-## 6: Check if the file is writable
-An `if` statement will be used to check if the file is writable.
-
-```
-    # Check if the file is writable
-    if [ -w "$file" ]; then
-        echo "The file is writable."
-    else
-        echo "The file is NOT writable."
-    fi
-```
-
 `-w`: This checks if the file is writable.
 
-`else`: This will be used in case the condition is false. It will be used to define an alternative block of code that will run only if the condition is false.
-
-`fi`: This will close the `if` statement.
-
----
-
-## 7: Check if the file is executable.
-A final `if` statement will be used to check if the file is executable.
-```
-   # Check if the file is executable
-    if [ -x "$file" ]; then
-        echo "The file is  executable."
-    else
-        echo "The file is NOT executable."
-    fi
-
-```
 `-x`: Checks if the file is executable. 
 
 `else`: This will be used in case the condition is false. It will be used to define an alternative block of code that will run only if the condition is false.
@@ -105,7 +72,9 @@ A final `if` statement will be used to check if the file is executable.
 
 ---
 
-## 8: Make it executable and run the script.
+
+
+## 6: Make it executable and run the script.
 In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `conditional.sh` executable. Once done, i will run the file using `./`.
 ```
 chmod +x conditional.sh
