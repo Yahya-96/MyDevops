@@ -26,19 +26,19 @@ git status
 ---
 
 ## 3: Make changes to BASH scripts.
-I will go on my BASH `.md` files and making meaningful changes and improvements. Once i have made the changes, i will save them and emter the following:
+I will go on my BASH `.md` files and making meaningful changes and improvements. Once i have made the changes, i will save them and enter the following:
 ```
 git add (filename.md)
 ```
 
-'git add': This stages changes (new, modified, or deleted files) to be included in the next commit. It moves changes to the staging area, allowing you to selectively choose what gets committed.
+`git add`: This stages changes (new, modified, or deleted files) to be included in the next commit. It moves changes to the staging area, allowing you to selectively choose what gets committed.
 
 ---
 
 ## 4: Make a commit using `git commit -m`
 Once `git add` is used, i will make a commit. This allows me to saves the staged changes to the repository’s history. It will also allow me to record the changes along with a descriptive message (`m`).
 ```
-git commit - "Concise description of change"
+git commit -m "Concise description of change"
 ```
 
 It is important to keep the commit messages concise yet descriptive. This is to ensure it is easy for others (and future you) to understand what was done without unnecessary details. Concise messages also help pinpoint relevant commits faster.
