@@ -1,6 +1,5 @@
 # Git Workflow
-
-## Objective: 
+ 
 In order to familiarise myself with the Git Workflow and understand the benefits of Git, i was tasked to the following: 
 
 - Create a feature branch
@@ -10,7 +9,9 @@ In order to familiarise myself with the Git Workflow and understand the benefits
 
 
 ## 1: Clone repository
-
+ Copy the Repository URL
+Go to your GitHub repository.
+Click the Code button and copy the HTTPS or SSH URL.
 
 
  ## 2: Create a feature branch.
@@ -51,3 +52,4 @@ git push
 ```
 
 ## 6: Initiate a Pull Request.  
+This is done before a merge request. A pull request facilitates collaboration by allowing someone else to review your code and double-check if everything is in order.
