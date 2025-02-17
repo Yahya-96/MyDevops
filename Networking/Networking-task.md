@@ -35,6 +35,15 @@ ssh -i /Downloads/my-key.pem ubuntu@3.8.125.215
 ```
 
 
-## 4: Install NGINX
+
+## 4: Install and start NGINX
+
+First i will update the system. This will keep my system up-to-date with security patches & new versions.
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+`apt update`: This updates the package list from Ubuntu’s repositories
+
 
 
