@@ -38,12 +38,37 @@ ssh -i /Downloads/my-key.pem ubuntu@3.8.125.215
 
 ## 4: Install and start NGINX
 
-First i will update the system. This will keep my system up-to-date with security patches & new versions.
+First i will update the instance. This will keep my system up-to-date with security patches & new versions.
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
-`apt update`: This updates the package list from Ubuntu’s repositories
+`apt update`: This updates the package list from Ubuntu’s repositories.
+
+`apt upgrade -y`: This installs available updates for installed packages.
+
+Next, i will install **NGINX**
+```
+sudo apt install nginx -y
+
+```
+
+I will then start and enable **NGINX** so that it auto boots on start.
+```
+sudo systemctl enable nginx
+sudo systemctl start nginx
+```
+
+## 5: Verify **NGINX** is running
+After waiting a few minutes for **NGINX** to complete its installation, i verified if it's running by typing my EC2's **Public IP Address** into a new browser.
+```
+http://3.8.125.215
+```
+
+This confirmed that NGINX was running successfully as it returned the **NGINX default welcome page**
+
+
+<img width="718" alt="image" src="https://github.com/user-attachments/assets/19c39a39-d546-4018-997b-4164d849320b" />
 
 
 
