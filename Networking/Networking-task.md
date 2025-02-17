@@ -9,14 +9,32 @@ I went on the [Cloudflare](https://www.cloudflare.com) website, created an accou
 
 
 ## 2: Create an EC2 intance
-Next, i went on the [AWS Management Console](https://aws.amazon.com/) website, created an account and navigated to the 'EC2' under the section called 'Compute'. I then configured the instance by doing the following:
+Next, i went on the [AWS Management Console](https://aws.amazon.com/) website, created an account and navigated to **EC2** under the section called **Compute**. I then configured the instance by doing the following:
 
 - Amazon Machine Image(AMI): **Ubuntu**
 - Instance type: **t2 micro** for simplicity
 - Instance details: Confirmed the **Public IP** was enabled
-- Configure key pair: Selected **created new key pair** and called it 'my-key.pem'
+- Configure key pair: Selected **created new key pair** and called it 'my-key.pem'. The private key was then downloaded. This will be used in conjunction with **SSH** later.
 - Security group: Selected **HTTP(port 80)** and **SSH(port 22)**
 
 For the other settings, i left it as default. The instance can now be launched!
 
-## 3: 
+
+## 3: Connect to the instance.
+I opened a new **terminal** on my machine and changed permissions on the `my-key.pem` file that was downloaded using `sudo chmod 400`.
+```
+sudo chmod 400 /Downloads/my-key.pem
+```
+Note: The private key was inside my **Downloads** folder.
+
+---
+
+Once the instance is running, i will **SSH** into the instance using the `my-key.pem` private key and the **Public IP Address** of the instance:
+```
+ssh -i /Downloads/my-key.pem ubuntu@3.8.125.215
+```
+
+
+## 4: Install NGINX
+
+
