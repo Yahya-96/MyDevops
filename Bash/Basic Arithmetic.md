@@ -56,7 +56,7 @@ This will make sure the user inputs numbers rather than letters. If user enters 
 
 ---
 
-## 3: Get the users input using `read -p`.
+## 4: Get the users input using `read -p`.
 As we will need to ask the user to input two numbers, the following will be used:
 
 ```
@@ -70,7 +70,7 @@ read -p "Please enter the second number: " num2
 
 ---
 
-## 4: It's time to perform the calculations!
+## 5: It's time to perform the calculations!
 In order to perform the calculations, we will need to start with `$(( )))`. This allows us to perform arithmetic calculations. As i will need to use addition, subtraction, multiplication, and division, i will do the following:
 
 ```
@@ -98,7 +98,7 @@ By default, bash only supports integer division, so `bc` is needed for accurate 
 
 ---
 
-## 5: Display the results of the calculations.
+## 6: Display the results of the calculations.
 Once the users inputs the two number and the system does it's calculations, the results will need to be displayed. The `echo` command will be used to display the results to the terminal.
 ```
 # This will display the results.
@@ -110,7 +110,7 @@ echo "Division: $div"
 
 ---
 
-## 6: Make it executable and run the script.
+## 7: Make it executable and run the script.
 In order to run the script, we will first need to make it executable. The `chmod =x` will be used to make the `math.sh` executable. Once done, i will run the file using `./`.
 ```
 chmod +x math.sh
