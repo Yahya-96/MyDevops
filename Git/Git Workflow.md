@@ -20,9 +20,24 @@ I have successfully downloaded Git on Mac!
 
 
 ## 2: Clone repository
+As i already created a repository a week prior, there was no need for me to create a new one. I will go to the **terminal** and link my remote repository to the local repository by running the following commands:
+```
+git config --global user.name "Yahya-96"
+git config --global user.email "ym96@hotmail.co.uk"
+```
 
-Go to your GitHub repository.
-Click the Code button and copy the HTTPS or SSH URL.
+`git config --global user.name "Yahya-96"`: This sets my global Git username to "Yahya-96"
+
+`git config --global user.email "ym96@hotmail.co.uk"`: This sets my global Git email to my personal email(**ym96@hotmail.co.uk**)
+
+Next, i will go to my remote repository and click on **Code**. I will copy the url link under **HTTPS**, go back to the **terminal** and type the following command:
+```
+git clone https://github.com/Yahya-96/MyDevops.git
+```
+
+This successfully clones the **MyDevops** repository.
+
+---
 
  ## 2: Create a feature branch.
 As i want to improve the efficiency of my code, it is important i follow the best Git practices for naming a branch. I named the feature branch `feature/script-enhancements`. On my terminal, i did the following:
