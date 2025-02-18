@@ -7,6 +7,7 @@ In order to familiarise myself with the Git Workflow and understand the benefits
 - Make meaningful commits
 - Create a Merge Request.
 
+---
 
 ## 1: Download Git on local machine
  1. Navigated to the [Github](https://github.com/) website and signed into my account.
@@ -18,6 +19,7 @@ In order to familiarise myself with the Git Workflow and understand the benefits
 
 I have successfully downloaded Git on Mac!
 
+---
 
 ## 2: Clone repository
 As i already created a repository a week prior, there was no need for me to create a new one. I will go to the **terminal** and link my remote repository to the local repository by running the following commands:
