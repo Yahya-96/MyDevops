@@ -1,6 +1,6 @@
 # Git Workflow
  
-In order to familiarise myself with the Git Workflow and understand the benefits of Git, i was tasked to the following: 
+In order to familiarise myself with the Git Workflow and understand the benefits of Git, i was tasked with the following: 
 
 - Create a feature branch
 - Make improvements to my BASH scripts
@@ -8,11 +8,21 @@ In order to familiarise myself with the Git Workflow and understand the benefits
 - Create a Merge Request.
 
 
-## 1: Clone repository
- Copy the Repository URL
+## 1: Download Git on local machine
+ 1. Navigated to the [Github](https://github.com/) website and signed into my account.
+ 2. As i already created a repository a week prior, there was no need for me to create a new one.
+ 3. Downloaded Git onto my local machine. As i am on Mac OS, i  installed [Homebrew](git-scm.com) via the **git-scm.com** website.
+ 4. Next, I will copy the script on the [Homebrew](https://brew.sh/) website, paste it onto my local terminal and press enter.
+ 5. Once [Homebrew](https://brew.sh/) has been downloaded, i will go back to [Git](https://git-scm.com/downloads/mac) and copy `$ brew install git`.
+ 6. Finally, i will go back to my terminal and paste `$ brew install git`
+
+I have successfully downloaded Git on Mac!
+
+
+## 2: Clone repository
+
 Go to your GitHub repository.
 Click the Code button and copy the HTTPS or SSH URL.
-
 
  ## 2: Create a feature branch.
 As i want to improve the efficiency of my code, it is important i follow the best Git practices for naming a branch. I named the feature branch `feature/script-enhancements`. On my terminal, i did the following:
