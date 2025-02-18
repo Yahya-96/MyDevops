@@ -35,7 +35,7 @@ Next, i will go to my remote repository and click on **Code**. I will copy the u
 git clone https://github.com/Yahya-96/MyDevops.git
 ```
 
-This successfully clones the **MyDevops** repository.
+This successfully cloned the **MyDevops** repository.
 
 ---
 
