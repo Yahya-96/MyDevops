@@ -69,12 +69,14 @@ git commit -m "Concise description of change"
 
 It is important to keep the commit messages concise yet descriptive. This is to ensure it is easy for others (and future you) to understand what was done without unnecessary details. Concise messages also help pinpoint relevant commits faster.
 
+---
 
 ## 5: Do not forget to use `git push`.
 Once i have made all of my commits, i am now ready to "push" this to my remote repo. This will be the final step.
 ```
 git push
 ```
+---
 
 ## 6: Initiate a Pull Request.  
 This is done before a merge request. A pull request facilitates collaboration by allowing someone else to review your code and double-check if everything is in order.
