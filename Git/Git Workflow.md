@@ -82,3 +82,29 @@ git push
 
 ## 6: Initiate a Pull Request.  
 This is done before a merge request. A pull request facilitates collaboration by allowing someone else to review your code and double-check if everything is in order.
+
+---
+
+## 7: Merge Pull Request.
+
+A merge request (MR) is a request to merge changes from one branch into another in a version control system like Git. It allows developers to review code, discuss changes, and approve or reject them before merging.
+
+The process typically involves:
+
+- Creating the MR – A developer proposes changes from a feature branch to the main branch.
+- Reviewing – Team members review the code, suggest changes, or approve it.
+- Merging – Once approved, the changes are merged into the main branch.
+
+## 8: Use `git pull` in terminal!
+
+Once the merge has been completed, i will go back to my **terminal** and do the following:
+``` git checkout main
+```
+
+This ensures that im on my main branch.
+
+```
+git pull
+```
+
+This ensures the changes that were made on the remote repository in replicated on my local machine. 🚀
