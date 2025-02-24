@@ -95,10 +95,13 @@ The process typically involves:
 - Reviewing – Team members review the code, suggest changes, or approve it.
 - Merging – Once approved, the changes are merged into the main branch.
 
+---
+
 ## 8: Use `git pull` in terminal!
 
 Once the merge has been completed, i will go back to my **terminal** and do the following:
-``` git checkout main
+```
+git checkout main
 ```
 
 This ensures that im on my main branch.
@@ -107,4 +110,4 @@ This ensures that im on my main branch.
 git pull
 ```
 
-This ensures the changes that were made on the remote repository in replicated on my local machine. 🚀
+This ensures the changes that were made on the remote repository is replicated on my local machine. 🚀
