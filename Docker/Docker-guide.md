@@ -23,7 +23,6 @@ You will see the message **"Unable to find image 'hello-world':latest locally"**
 
 Docker will then create a **container** from the image and runs it. Once you run the container, you will see the message "Hello from Docker". This shows the installation was a success. 
 
-Finally, create a **Git** repo
 
 ---
 
@@ -34,7 +33,7 @@ Finally, create a **Git** repo
 python3 --version
 ```
 
-Next, use the `pip` commmand in order to install **Flask** and all of its dependencies.Depending on the Python version you've downloaded, use the appropriate **number** after `pip`
+Next, use the `pip` commmand in order to install **Flask** and all of its dependencies. Depending on the Python version you've downloaded, use the appropriate **number** after `pip`
 ```
 pip3 install flask
 ```
@@ -46,6 +45,52 @@ Now you will create a **directory** on your command line and start working from 
 mkdir hello_flask
 cd hello_flask
 ```
+
+Next create your application file. Since you will be using **Python**, end the file name with `.py`
+```
+touch app.py
+```
+
+Input the following onto your `app.py` file
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, world!'
+
+if  __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+
+`from flask import Flask`: This imports the Flask class from the Flask framework, allowing you to create a web application in Python.
+
+`@app.route('/')` > Maps the root URL (/) to the function below.
+
+`def hello_world():` > Defines a function that handles requests to /.
+
+`return 'Hello, world!'`> Responds with "Hello, world!" when accessed.( You can change this to whatever you would like )
+
+`if __name__ == '__main__':` > Ensures the script runs only when executed.
+
+`app.run(host='0.0.0.0', port=5002)` > Starts the Flask server:
+  - `host='0.0.0.0'` > Makes the app accessible on all network interfaces.
+  - `port=5002` > Runs the app on port 5002.
+
+Run the application on your machine to ensure its works as expected.
+```
+python3 app.py
+```
+
+The application will start running on localhost on `port 5002`: `127.0.0.1:5002`. Click on the link that appears on your **terminal** and it will take you to the website with your custom message displaying. 
+
+
+<img width="456" alt="image" src="https://github.com/user-attachments/assets/fcacf3ed-acf6-4c48-89e2-09b1a82ed756" />
+
+To stop the server from running, press `ctrl+C` on your keyboard.
 
 
 
