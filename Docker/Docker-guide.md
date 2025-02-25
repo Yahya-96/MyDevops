@@ -251,7 +251,7 @@ docker run -d --name mydb --network my-custom-network -e MYSQL_ROOT_PASSWORD=my-
 
 ---
 
-### 4.1 Build the docker image for the Flask app using the updated Dockerfile
+### 4.1 Build the docker image for the Flask app using the updated Dockerfile.
 ```
 docker build -t hello-flask-mysql .
 ```
@@ -269,7 +269,7 @@ Use `docker stop` to stop your containers.
 
 ---
 
-## 5: Setup Docker Compose 
+## 5: Setup Docker Compose.
 **Docker Compose** is a tool that allows you to define and manage multiple containers and Docker applications. It lets you define all your single files and manage them collectively. It offers an efficient way to manage multiple container Docker applications. 
 
 First, create a `docker-compose.yml` file. This file lists all the services your application needs (like a blueprint that describes each container).
@@ -319,7 +319,7 @@ services:
 
 ---
 
-### 5.1: Run  Docker Compose
+### 5.1: Run  Docker Compose.
 ```
 docker compose up -d
 ```
