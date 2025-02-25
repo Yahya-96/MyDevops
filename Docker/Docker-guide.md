@@ -94,10 +94,42 @@ To stop the server from running, press `ctrl+C` on your keyboard.
 
 
 
-## 3: Create a Dockerfile
-A DockerFile provides a step-by-step instructions on how to build a docker image.is a You will need to first create a simple web application in order to containerise using **Dockerfile**. 
+## 3: Containerise your application using Docker
+As you have created a web application, its time to containerise the app using Docker. After this step, you will have a Docker container running your **Python** app, allowing you to deploy it anywhere. 
 
+Start by writing a **Dockerfile**.  A **DockerFile** is a text-file that provides step-by-step instructions on how to build a docker image. Create the **Dockerfile** in the `hello_flask` directory
+```
+touch Dockerfile
+```
 
+Note: Make sure you capitalise the first letter(D). Also, a Dockerfile does **not** have an extension.
+
+Now it's time to start writing the contents of the **Dockerfile**.
+```
+FROM python:3.8-slim
+
+WORKDIR /app
+
+RUN pip install flask 
+
+COPY . .
+
+EXPOSE 5002
+
+CMD ["python", "app.py"]
+```
+
+`FROM python:3.8-slim` > Uses a lightweight Python 3.8 image as the base.
+
+`WORKDIR /app` > Sets `/app` as the working directory inside the container.
+
+`RUN pip install flask` > Installs Flask inside the container.
+
+`COPY . .` > Copies all files from the current directory(`app.py`) to the container.
+
+`EXPOSE 5002` > Ensures that the app will run on port 5002(This was set when creating the application.)
+
+`CMD ["python", "app.py"]` > Runs `app.py` app using Python when the container starts.
 
 ├── hello-flask (directory)
 │   ├── app.py
