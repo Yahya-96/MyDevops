@@ -94,17 +94,17 @@ To stop the server from running, press `ctrl+C` on your keyboard.
 
 
 
-## 3: Containerise your application using Docker
+## 3: Build the Docker image and containerise your application using Docker
 As you have created a web application, its time to containerise the app using Docker. After this step, you will have a Docker container running your **Python** app, allowing you to deploy it anywhere. 
 
-Start by writing a **Dockerfile**.  A **DockerFile** is a text-file that provides step-by-step instructions on how to build a docker image. Create the **Dockerfile** in the `hello_flask` directory
+1. Start by writing a **Dockerfile**.  A **DockerFile** is a text-file that provides step-by-step instructions on how to build a docker image. Create the **Dockerfile** in the `hello_flask` directory
 ```
 touch Dockerfile
 ```
 
-Note: Make sure you capitalise the first letter(D). Also, a Dockerfile does **not** have an extension.
+**Note**: Make sure you capitalise the first letter(D). Also, a Dockerfile does **not** have an extension.
 
-Now it's time to start writing the contents of the **Dockerfile**.
+2. Now it's time to start writing the contents of the **Dockerfile**.
 ```
 FROM python:3.8-slim
 
@@ -131,6 +131,38 @@ CMD ["python", "app.py"]
 
 `CMD ["python", "app.py"]` > Runs `app.py` app using Python when the container starts.
 
+**Note**: Ensure that both files (app.py and Dockerfile) are placed within the `hello_flask` directory.
+
+3. To build the Docker image, go back to your terminal and type in the following:
+   ```
+   docker build -t hello-flask .
+   ```
+
+   `docker build` > Creates a Docker image from the Dockerfile.
+
+   `-t hello-flask` → Tags the image with the name "hello-flask" for easy reference.
+
+   `.`> Uses the Dockerfile in the current directory.
+
+   Once you press **enter**, Docker will execute each intruction in the **Dockerfile**. Once the build is complete, you will be ready to run the image as a **container**.
+
+  4. Run the Docker image as a container. This will return a container ID
+     ```
+     docker run -d -p 5002:5002 hello-flask
+     ```
+   `docker run -d` > Starts the container in the background (detached mode).
+
+   `-p 5002:5002` > Maps port 5002 of the container to 5002 on the your machine.
+
+   This will return a container ID. This will indicate that your container is running. You can verify this by using the `docker ps` command. This will return the first 12 characters of the container ID, as well as the image name, the time 
+   it was created etc. 
+
+ 5. Refresh the browser you were running your application on earlier(127.0.0.1:5002). This should display the previous webpage. This indicates that the application is running within the container you just created.
+ 
+  
+    To stop the container, you will need to use the `docker stop` command followed by the first 12 characters of container ID. Verify if the container has stopped running by using the `docker ps` command. 
+
+ 8. 
 ├── hello-flask (directory)
 │   ├── app.py
 │   |── Dockerfile
