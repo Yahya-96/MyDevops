@@ -269,7 +269,7 @@ Use `docker stop` to stop your containers.
 
 ---
 
-## 5 Use Docker Compose
+## 5: Setup Docker Compose 
 **Docker Compose** is a tool that allows you to define and manage multiple containers and Docker applications. It lets you define all your single files and manage them collectively. It offers an efficient way to manage multiple container Docker applications. 
 
 First, create a `docker-compose.yml` file. This file lists all the services your application needs (like a blueprint that describes each container).
@@ -311,11 +311,27 @@ services:
 
  `mydb` > The MySQL database container:
 
- - `image: mysql:5.7` > Uses the MySQL 8 image.
+ - `image: mysql:8` > Uses the MySQL 8 image.
     
  - `environment:` > Sets environment variables for the container:
 
  -  `MYSQL_ROOT_PASSWORD: my-secret-pw` > Sets the MySQL root password.
+
+---
+
+### 5.1: Run  Docker Compose
+```
+docker compose up -d
+```
+
+### Output:
+<img width="1239" alt="image" src="https://github.com/user-attachments/assets/374cc7a4-a0b0-451b-ae94-c4147370295c" />
+
+
+Take down the application using `docker compose down`. This will stop the containers.
+
+---
+
 
 ├── hello-flask (directory)
 │   ├── app.py
