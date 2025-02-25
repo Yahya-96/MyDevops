@@ -162,7 +162,11 @@ CMD ["python", "app.py"]
   
     To stop the container, you will need to use the `docker stop` command followed by the first 12 characters of container ID. Verify if the container has stopped running by using the `docker ps` command. 
 
- 8. 
+
+---
+
+## 4: Build a MySQL database container and link to FLask application.
+
 ├── hello-flask (directory)
 │   ├── app.py
 │   |── Dockerfile
