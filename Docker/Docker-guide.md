@@ -269,8 +269,53 @@ Use `docker stop` to stop your containers.
 
 ---
 
-## 5 Use Dcoker Compose
+## 5 Use Docker Compose
+**Docker Compose** is a tool that allows you to define and manage multiple containers and Docker applications. It lets you define all your single files and manage them collectively. It offers an efficient way to manage multiple container Docker applications. 
 
+First, create a `docker-compose.yml` file. This file lists all the services your application needs (like a blueprint that describes each container).
+```
+touch docker-compose.yml
+```
+
+Once the file is created, enter the following code:
+```
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5002:5002"
+    depends_on:
+      - mydb
+
+  mydb:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+```
+
+`version: '3.8'` > Specifies the version of the file-format. The lastest version is `3.8`.
+
+`services`>  Defines the services (containers) in the app:
+
+  - `.web:` > The Flask app container
+
+   
+- `.build: .` > Builds the Docker image from the current directory(`.`).
+   
+- `.ports: "5002:5002"`> Maps port 5002 on the host to port 5002 inside the container, allowing external access.
+
+ - `depends_on: mydb` > Ensures the `mydb` service starts before web.
+
+
+ `mydb` > The MySQL database container:
+
+ - `image: mysql:5.7` > Uses the MySQL 8 image.
+    
+ - `environment:` > Sets environment variables for the container:
+
+ -  `MYSQL_ROOT_PASSWORD: my-secret-pw` > Sets the MySQL root password.
 
 ├── hello-flask (directory)
 │   ├── app.py
