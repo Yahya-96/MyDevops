@@ -165,7 +165,112 @@ CMD ["python", "app.py"]
 
 ---
 
-## 4: Build a MySQL database container and link to FLask application.
+## 4: Link Flask application to MySQL database container.
+
+Start by modifying the `app.py` and `Dockerfile` to ensure that it installs the MySQL database.
+```
+# app.py
+
+from flask import Flask
+import MySQLdb
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    # Connect to the MySQL database
+    db = MySQLdb.connect(
+        host="mydb",    # Hostname of the MySQL container
+        user="root",    # Username to connect to MySQL
+        passwd="my-secret-pw",  # Password for the MySQL user
+        db="mysql"      # Name of the database to connect to
+    )
+    cur = db.cursor()
+    cur.execute("SELECT VERSION()")
+    version = cur.fetchone()
+    return f'Hello, World! MySQL version: {version[0]}'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5002)
+```
+
+`import MySQLdb`: Imports the MySQLdb module, enabling Python to connect to and interact with a MySQL database.
+
+
+
+```
+## Dockerfile
+FROM python:3.8-slim
+
+WORKDIR /app
+
+COPY . .
+
+RUN apt-get update && apt-get install -y \
+    gcc \
+    python3-dev \
+    libmariadb-dev \
+    pkg-config
+
+RUN pip install flask mysqlclient
+
+EXPOSE 5002
+
+CMD ["python", "app.py"]
+```
+
+`pip install flask mysqlclient` > Installs Flask (a web framework) and mysqlclient (a MySQL database adapter for Python).
+
+Create a custom network to allow the containers to communicate with each other.
+
+Run the following command to create the network:
+```
+docker network create my-custom-network # Name of my network
+```
+
+
+
+Run the following command to run the MySQL container:
+```
+docker run -d --name mydb --network my-custom-network -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql:8
+```
+
+
+
+
+
+`docker run -d` : Runs a container in detached mode (in the background).
+
+`name mydb`: Assigns the name mydb to the container.
+
+`network my-custom-network`: Connects the container to the custom Docker network named my-custom-network.
+
+`-e MYSQL_ROOT_PASSWORD=my-secret-pw`: Sets the environment variable `MYSQL_ROOT_PASSWORD` inside the container to `my-secret-pw`, which is required to set the MySQL root password.
+
+`mysql:8`: Specifies the Docker image and version to use for the container (mysql image, version 8).
+
+---
+
+### 4.1 Build the docker image for the Flask app using the updated Dockerfile
+```
+docker build -t hello-flask-mysql .
+```
+
+Next, run the Flask application:
+```
+docker run -d --name myapp5 --network my-custom-network -p 5002:5002 hello-flask-mysql
+```
+
+### Output:
+<img width="515" alt="image" src="https://github.com/user-attachments/assets/9a2fd31e-52c1-4e69-84ab-35acec7f34d6" />
+
+Use `docker stop` to stop your containers.
+
+
+---
+
+## 5 Use Dcoker Compose
+
 
 ├── hello-flask (directory)
 │   ├── app.py
