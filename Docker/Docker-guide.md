@@ -333,6 +333,10 @@ Take down the application using `docker compose down`. This will stop the contai
 ---
 
 
+## 6: Push to DockerHub.
+
+
+
 ├── hello-flask (directory)
 │   ├── app.py
 │   |── Dockerfile
