@@ -19,12 +19,38 @@ In this guide, you will be able to do the following:
 ```
 docker run hello-world
 ```
-You will see the message "Unable to find image 'hello-world':latest locally". this means it could not find the image on your machine. This image will then be pulled from the **library** where it's stored, which is **DockerHub**.
+You will see the message **"Unable to find image 'hello-world':latest locally"**. this means it could not find the image on your machine. This image will then be pulled from the **library** where it's stored, which is **DockerHub**.
 
 Docker will then create a **container** from the image and runs it. Once you run the container, you will see the message "Hello from Docker". This shows the installation was a success. 
 
-## 2: Create a Dockerfile
-You will need to first create a simple web application in order to containerise using **Dockerfile**. 
+Finally, create a **Git** repo
+
+---
+
+
+## 2: Create a simple Flask application using Python
+**FLask** is a simple and lightweight framwork for creating web applications in **Python**. Go the [Python](https://www.python.org/) website and download the latest version for your OS( Windows, MacOS or Linux). Once done, use the following command to confirm the installation
+```
+python3 --version
+```
+
+Next, use the `pip` commmand in order to install **Flask** and all of its dependencies.Depending on the Python version you've downloaded, use the appropriate **number** after `pip`
+```
+pip3 install flask
+```
+
+This will install **Flask** and all of its dependencies. Now you are ready to build your web application.
+
+Now you will create a **directory** on your command line and start working from that **directory**. Give the **directory** a suitable name. 
+```
+mkdir hello_flask
+cd hello_flask
+```
+
+
+
+## 3: Create a Dockerfile
+A DockerFile provides a step-by-step instructions on how to build a docker image.is a You will need to first create a simple web application in order to containerise using **Dockerfile**. 
 
 
 
