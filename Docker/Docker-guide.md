@@ -342,11 +342,37 @@ Take down the application using `docker compose down`. This will stop the contai
 
 
 ## 6: Push to DockerHub.
+Docker Hub is a cloud-based repository for Docker images. It stores pre-built images (public and private) for applications. You can use the following commands :
+
+- `docker pull` > Pull images from Docker Hub to run containers.
+- `docker push` > Push images to Docker Hub after building them locally.
 
 
+Once you've created a [Dockerhub](https://hub.docker.com/) account and a repository, use the code below as a format for you won repo name and tag:
 
+```
+docker build -t yahyama/flask-mysql:v1 .
+```
+
+- `-t yahyama/flask-mysql:v1`: Tags the image with yahyama/flask-mysql as the Dockerhub repository name and v1 as the version (tag).
+
+- `.`: Specifies the current directory
+
+**Note**: `yahyama` is my Dockerhub username and `flask-mysql` is the repo name. You will need to change this to reflect your own username and repo name.
+
+Once the image is built and tagged, you can now push this to Dockerhub
+
+```
+docker push yahyama/flask-mysql:v1
+```
+---
+
+## Conclusion
+This guide  demonstrates how to build and run a multi-container application using Docker Compose, Flask and MySQL database. It also showcases how to push your Docker images to Dockerhub.
+
+```
 ├── hello-flask (directory)
 │   ├── app.py
 │   |── Dockerfile
 ├── |── docker-compose.yml
-
+```
