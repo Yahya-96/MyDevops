@@ -121,6 +121,8 @@ EXPOSE 5002
 CMD ["python", "app.py"]
 ```
 
+## Understanding the Dockerfile
+
 `FROM python:3.8-slim` > Uses a lightweight Python 3.8 image as the base.
 
 `WORKDIR /app` > Sets `/app` as the working directory inside the container.
@@ -133,7 +135,11 @@ CMD ["python", "app.py"]
 
 `CMD ["python", "app.py"]` > Runs `app.py` app using Python when the container starts.
 
+
+
 **Note**: Ensure that both files (app.py and Dockerfile) are placed within the `hello_flask` directory.
+
+---
 
 3. To build the Docker image, go back to your terminal and type in the following:
    ```
