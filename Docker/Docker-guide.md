@@ -66,6 +66,8 @@ if  __name__ == '__main__':
 ```
 
 
+## 2.1: Understanding Flask
+
 `from flask import Flask`: This imports the Flask class from the Flask framework, allowing you to create a web application in Python.
 
 `@app.route('/')` > Maps the root URL (/) to the function below.
