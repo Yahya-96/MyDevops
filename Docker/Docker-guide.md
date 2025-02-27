@@ -1,4 +1,4 @@
-# Learning how to use Docker.
+# Building a multi-container application.
 
 ## Overview
 In this guide, you will be able to do the following:
