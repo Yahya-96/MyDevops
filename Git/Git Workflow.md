@@ -14,7 +14,7 @@ In order to familiarise myself with the Git Workflow and understand the benefits
  2. As i already created a repository a week prior, there was no need for me to create a new one.
  3. Downloaded Git onto my local machine. As i am on Mac OS, i  installed [Homebrew](git-scm.com) via the **git-scm.com** website.
  4. Next, I will copy the script on the [Homebrew](https://brew.sh/) website, paste it onto my local terminal and press enter.
- 5. Once [Homebrew](https://brew.sh/) has been downloaded, i will go back to [Git](https://git-scm.com/downloads/mac) and copy `$ brew install git`.
+ 5. Once [Homebrew](https://brew.sh/) is downloaded, i will go back to [Git](https://git-scm.com/downloads/mac) and copy `$ brew install git`.
  6. Finally, i will go back to my terminal and paste `$ brew install git`
 
 I have successfully downloaded Git on Mac!
